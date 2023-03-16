@@ -14,17 +14,46 @@
         integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" 
         crossorigin="anonymous"
     ></script>
-    <script>
-        $(document).ready(function(){
-            console.log('jquery loading completed');
-            console.info('jquery linfo completed');
-            console.warn('jquery warn loading completed');
-            console.error('jquery error loading completed');
-        })
-    </script>
     <title>My First Wallet</title>
 </head>
 <body>
-    
+    <header class="cnotainer">
+        <h2>이더리움 전자지갑</h2>
+        <div class="p-2">
+            <button id="newAccount">계좌생성</button>
+            <button id="checkBalance">잔액확인</button>
+            <button id="sendEther">송금하기</button:>
+        </div>
+    </header>
+    <section class="container">
+        <div class="py-3">
+            <div class="h5">나의 계좌 목록</div>
+            <div class="row border" id="accountList">아무것도 없음</div>
+        </div>
+        <div class="row py-3">
+            <div class="col-3"><span class="h5">송신처(from address)</span></div>
+            <div class="col">
+                <input id="fromAddress" class="w-100" value=""/>
+            </div>
+        </div>
+        <div class="row py-3">
+            <span class="col-3"><span class="h5">수신처(to address)</span></span>
+            <span><input class="w-100" id="toaddress" value=""/></span>
+        </div>
+        <div class="row py-3">
+            <span class="col-3"><span class="h5">보낼코인(ether)</span></span>
+            <span><input class="col" id="sendCoin" placeholder="" value="1"/></span>
+        </div>
+        <div class="row py-3">
+            <span class="col-3"><span class="h5">비밀번호(account private key)</span></span>
+            <div class="col">
+                <input 
+                    type="password" 
+                    class="w-100" 
+                    id="yourpw" 
+                    value="0x7DB2449Da7fdBAdb2a18DA2A58B0690B54A53141">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
