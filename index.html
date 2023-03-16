@@ -4,25 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Wallet</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
           rel="stylesheet" 
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
           crossorigin="anonymous"
     />
+    <script type="text/javascript" scr="/scripts/web3.min.js"></script>
     <script 
         src="https://code.jquery.com/jquery-3.6.4.slim.min.js" 
         integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" 
         crossorigin="anonymous"
     ></script>
-    <title>My First Wallet</title>
+    <script>
+        $(document).ready(function(){
+            console.log("log jquery loading completed");
+            $("#btnNewAccount").click(function(){
+                alert("계좌생성");
+            });
+            $("#btnCheckBalance").click(function(){
+                alert("잔액확인");
+            });
+            $("#btnSendEthe").click(function(){
+                alert("송금하기");
+            });
+        })
+    </script>
 </head>
 <body>
     <header class="cnotainer">
         <h2>이더리움 전자지갑</h2>
         <div class="p-2">
-            <button id="newAccount">계좌생성</button>
-            <button id="checkBalance">잔액확인</button>
-            <button id="sendEther">송금하기</button:>
+            <button id="btnNewAccount">계좌생성</button>
+            <button id="btnCheckBalance">잔액확인</button>
+            <button id="btnSendEther">송금하기</button:>
         </div>
     </header>
     <section class="container">
